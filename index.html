@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Angular Sorting and Filtering</title>
+
+<link rel="stylesheet" href="CSS/main.css">
+
+</head>
+<body>
+<header>
+<h2>Angular Sorting and Filtering</h2>
+
+</header>
+
+ <div class="container-fluid">
+  <div class="row">
+  <div class="col-md-12">
+  
+<div ng-controller="myController">
+    
+    <input type="text" ng-model="filterString"/>
+    <input type="button" ng-model="setFilter()" value="Filter"/>
+    <table>
+        <tr>
+            <th ng-click="setSort('movie')">Movie</th>
+            <th ng-click="setSort('genre')">Genre</th>
+            <th ng-click="setSort('year')">Year</th>
+        </tr>
+        <tr ng-repeat="movies in filteredMovies | orderBy:column:reverse">
+            <td>{{movies.movie}}</td>
+            <td>{{movies.genre}}</td>
+            <td>{{movies.year}}</td>
+        </tr>
+    </table>
+</div>
+</div>
+
+
+</div><!--end row-->
+</div><!--end container-fluid-->
+
+
+
+   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+<script src="JS/main.js"></script>
+
+<script>
+</body>
+</html>
+ 
