@@ -1,0 +1,30 @@
+h2 {font-family:arial,helvetica,sans-serif;
+color:#666}
+
+table {
+  text-align: center;
+  font-family:arial, helvetica, sans-serif;
+   color:#222;
+  margin-top:25px;
+  border:1px solid #222;
+  width:800px;
+  
+        }
+
+        td, th {
+            padding: 10px;
+        }
+
+        th {
+            cursor: pointer;
+          background-color:#222;
+          color:#fff;
+        }
+
+td{
+  border:1px solid #444;
+}
+
+tr:nth-child(odd){
+   background-color:#ddd;
+}
